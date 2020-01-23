@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>FootballBlog</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header__title">
+        <% link_to "Football Blog", '#', class: "header__title--text" %>
+      </div>
+      <div class="heder__right">
+        <%= link_to%>
+    <%= yield %>
+  </body>
+</html>
