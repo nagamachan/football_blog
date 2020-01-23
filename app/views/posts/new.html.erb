@@ -1,0 +1,9 @@
+<div class="content__title">
+  Create new article
+</div>
+
+<%= form_with model: @post, class: :form, local: true do |form| %>
+  <%= form.text_field :title, placeholder: :Title, class: :form__title %>
+  <%= form.text_area :content, placeholder: :Text, class: :form__text %>
+  <%= form.submit 'Post', class: :form__btn %>
+<% end %>
