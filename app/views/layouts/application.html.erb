@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>FootballBlog</title>
+    <title>Football Blog</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -12,10 +11,10 @@
   <body>
     <header class="header">
       <div class="header__title">
-        <% link_to "Football Blog", '#', class: "header__title--text" %>
+        <%= link_to "Football blog", '#', class: "header__title--text" %>
       </div>
       <div class="heder__right">
-        <%= link_to "新規投稿", '#', class: "header__right--btn" %>
+        <%= link_to "New Post", '#', class: "header__right--btn" %>
       </div>
     </header>
     <div class="contents">
