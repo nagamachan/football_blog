@@ -14,7 +14,13 @@
         <%= link_to "Football blog", root_path, class: "header__title--text" %>
       </div>
       <div class="heder__right">
-        <%= link_to "New Post", new_post_path, class: "header__right--btn" %>
+      <% if user_signed_in? %>
+          <%= link_to "Post", new_post_path, class: "header__right--btn" %>
+          <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "header__right--btn" %>
+        <% else %>
+        <%= link_to "Login", new_user_session_path, class: "header__right--btn" %>
+        <%= link_to "Sign up", new_user_registration_path, class: "header__right--btn" %>
+        <% end %>
       </div>
     </header>
     <div class="contents">
